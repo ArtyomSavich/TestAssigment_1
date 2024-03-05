@@ -7,6 +7,8 @@ import java.math.BigDecimal;
 import org.junit.Before;
 import org.junit.Test;
 
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import ru.bank.assigment.productservice.product.card.BankCardTest;
 
 public class DebitCardTest extends BankCardTest {
@@ -20,6 +22,7 @@ public class DebitCardTest extends BankCardTest {
 
 
     @Test
+    @Severity(SeverityLevel.CRITICAL)
     public void  testDebitCard() throws IllegalArgumentException{
         debitCard.topUp(BigDecimal.valueOf(2500));
         debitCard.debit(BigDecimal.valueOf(1000));
